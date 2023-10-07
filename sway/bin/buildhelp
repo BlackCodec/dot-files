@@ -1,0 +1,98 @@
+#!/bin/bash
+
+debug="${1}"
+
+declare -A sessions
+declare -A texts
+declare -A commands
+
+index=0
+logmsg="Release: 20230925.0825"
+titlelen=0
+
+function sysout() {
+  logmsg=$(echo "${logmsg}"; echo "${@}")
+}
+
+function extractBind() {
+  current_file=${1}
+  sysout "Current file: ${current_file}"
+  while read -r configline; do
+    unset ${cses}
+    unset ${ctxt}
+    unset ${ccmd}
+    unset ${ctmp}
+    unset ${tindex}
+    sysout "Process line: ${configline}"
+    ctmp=$(echo "${configline}" | awk -F " # " '{print $2}')
+    if [[ ! -z "${ctmp}" ]]; then
+      sysout "Valid line, work on: ${ctmp}"
+      # split tmp in section and text
+      cses=$(echo "${ctmp}" | awk -F ":" '{print $1}')
+      ctxt=$(echo "${ctmp}" | awk -F ":" '{print $2}')
+      ccmd=$(echo "${configline}" | \
+             awk -F " # " '{print $1}' | awk -F " " '{print $2}' | \
+             sed "s|\$winbtn|Win|g" | sed "s|\$altbtn|Alt|g" | \
+             sed "s|Left|freccia sinistra|g" | sed "s|Up|freccia su|g" | \
+             sed "s|Right|freccia destra|g" | sed "s|Down|freccia giù|g")
+      sysout "Add ${cses} [${index}] -> ${ctxt} = ${ccmd}"
+      #csize=$((${#cses}+${#ctxt}+${#ccmd}+20))
+      csize=$((${#ctxt}+2))
+      if [[ ${csize} > ${titlelen} ]]; then
+        sysout "Update maxlen: ${titlelen} -> ${csize}"
+        titlelen=${csize}
+      fi
+      texts[${index}]=${ctxt}
+      commands[${index}]=${ccmd}
+      tindex=""
+      if [[ ${sessions[${cses}]} ]]; then
+         tindex=$(echo "${sessions[${cses}]}:")
+      fi
+      sessions[${cses}]=$(echo "${tindex}${index}")
+      index=$((index+1))
+    fi
+  done <<< $(cat ${current_file} | grep bindsym | grep "#")
+}
+
+function printAll() {
+  for sname in "${!sessions[@]}"; do
+    sysout "Session: ${sname}"
+    sysout "Indexes: ${sessions[${sname}]}"
+    sbody=""
+    IFS=':' read -ra iarr <<< "${sessions[${sname}]}"
+    for cindex in "${iarr[@]}"; do
+      sysout "${cindex} -> ${texts[${cindex}]}: ${commands[${cindex}]}"
+      separator=""
+      for ((i=${#texts[${cindex}]};i<=${titlelen};++i)); do
+        separator=$(echo -n "${separator}.")
+      done
+      sysout "Separator size for index ${cindex}: ${#separator}"
+      sbody=$(echo "${sbody} • <span font_weight='bold'>${texts[${cindex}]}</span> ${separator} : ${commands[${cindex}]} <br>")
+    done
+    notify-send --urgency=low -e "${sname}" "${sbody}" -t 60000 
+  done
+  echo "${separator}"
+}
+
+sysout "Start: $(date)"
+if [[ -f "${HOME}/.config/sway/config" ]]; then
+  sysout "Process main config file: ${HOME}/.config/sway/config"
+  extractBind ${HOME}/.config/sway/config
+  includedir=$(grep "include " ${HOME}/.config/sway/config | \
+               awk -F "include " '{print $2}' | \
+               sed "s|\*||" | sed "s|\${HOME}|${HOME}|")
+  if [[ ! -z "${includedir}" ]]; then
+    sysout "Found additional config directory: ${includedir}/*.conf"
+    for current_file in $(find ${includedir} -name "*.conf"); do
+      sysout "Analyze config file: ${current_file}"
+      extractBind ${current_file}
+    done
+  fi
+fi
+sysout "Print all collected data"
+printAll 
+sysout "End: $(date)"
+if [[ "${debug}" == "-d" ]] || [[ "${debug}" == "--debug" ]]; then
+  echo "${logmsg}"
+fi
+exit 0

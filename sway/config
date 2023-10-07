@@ -1,0 +1,32 @@
+# Please see https://i3wm.org/docs/userguide.html for a complete reference!
+
+# Variables
+set $terminale /usr/bin/sakura
+set $filemanager /usr/bin/nautilus
+set $texteditor /usr/bin/xed
+
+# Buttons
+set $winbtn Mod4
+set $altbtn Mod1
+set $ctrlbtn Control
+
+workspace_layout tabbed
+
+# Font
+font pango:monospace 8
+
+# Monitor
+output DP-4   pos 0    0 res 1600x900@60Hz  bg ${HOME}/.config/sway/wallpapers/piccolo stretch
+output eDP-1  pos 1600 0 res 1366x768       bg ${HOME}/.config/sway/wallpapers/laptop  stretch
+output DP-3   pos 2966 0 res 1920x1080      bg ${HOME}/.config/sway/wallpapers/monitor stretch
+
+# Alt+Mouse move and resize windows
+floating_modifier $altbtn normal
+
+# assegna applicazioni a workspace
+# browser
+#assign [class="Google-chrome" instance="google-chrome"] number 5
+#assign [class="Firefox" instance="Navigator"] number 5
+
+include ${HOME}/.config/sway/configs/*
+

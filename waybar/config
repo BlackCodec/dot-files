@@ -1,0 +1,166 @@
+{
+    "name": "barra",
+    "layer": "top",
+    "position": "top", 
+    "height": 26, 
+    "spacing": 4, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad"],
+    "modules-center": ["sway/window"],
+    "modules-right": [
+        "cpu",
+        "memory",
+        "disk",
+        "network",
+        "backlight",
+        "keyboard-state#num",
+        "keyboard-state#maiusc",
+        "pulseaudio",
+        "battery",
+        "custom/bluetooth",
+        "tray",
+        "clock",
+        "custom/exit"
+    ],
+
+    // Modules configuration
+    "sway/workspaces": {
+         "disable-scroll": false,
+         "all-outputs": false,
+         "warp-on-scroll": false,
+         "format": "{value}"
+    },
+    "disk": {
+      "path":"/home",
+      "format": "📂 {percentage_used}%"
+    },
+    "keyboard-state#num": {
+        "numlock": true,
+        "format": "{icon}",
+        "format-icons": {
+            "locked": "1️⃣",
+            "unlocked": " 1 "
+        }
+    },
+    "keyboard-state#maiusc": {
+        "capslock": true,
+        "format": "{icon}",
+        "format-icons": {
+            "locked": "🆎",
+            "unlocked": "ab"
+        }
+    },
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "sway/scratchpad": {
+        "format": "{icon} {count}",
+        "show-empty": false,
+        "format-icons": ["", ""],
+        "tooltip": true,
+        "tooltip-format": "{app}: {title}"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10,
+        "show-passive-items": true
+    },
+    "clock": {
+        "format": "{:🕐 %H:%M  📅 %a %d %b}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "cpu": {
+        "format": "💻 {usage}% ",
+        "tooltip": false
+    },
+    "memory": {
+        "format": " {}% "
+    },
+    "temperature": {
+        "critical-threshold": 80,
+        "format": "{icon} {temperatureC}°C",
+        "format-icons": ["", "", ""]
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{icon} {percent}%",
+        "format-icons": ["☼","☀"],
+        "scroll-step": 5.0
+    },
+    "battery": {
+        "bat": "BAT0",
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {icon} {capacity}%",
+        "format-plugged": " {icon} {capacity}%",
+        "format-full": "",
+        "format-alt": "{icon} {capacity}% - {time}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": " {essid} ({signalStrength}%)",
+        "format-ethernet": "",
+        "tooltip-format": "🌍{ifname} via {gwaddr} ",
+        "format-linked": "🌍{ifname}",
+        "format-disconnected": "⛔",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "pulseaudio": {
+        "scroll-step": 5.0, 
+        "format": "{icon} ({volume}%)  {format_source}",
+        "format-bluetooth": "{icon} ({volume}%) {format_source}",
+        "format-bluetooth-muted": "  {icon} {format_source}",
+        "format-muted": "  {format_source}",
+        "format-source": "",
+        "format-source-muted": " ",
+        "format-icons": {
+            "headphone": "🎧",
+            "hands-free": "🎧",
+            "headset": "🎧",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["🕨", "🕩", "🕪"]
+        },
+        "on-click": "pavucontrol",
+    },
+    "sway/window": {
+        "format": "{app_id} - {title}",
+        "icon": false,
+        "max-length":50,
+        "rewrite": {
+            " - ": "",
+            "Navigator - (.*)": "🌎 $1",
+            "sakura - (.*)": "  $1",
+            "org.telegram.*": " Telegram"
+        }
+    },
+    "custom/bluetooth": {
+        "format": "{}",
+  	"interval": 10,
+  	"exec": "[[ ! -z $(bluetoothctl list) ]] && echo  || echo ⛔️",
+  	"exec-if": "exit 0",
+  	"on-click": "blueberry",
+  	"signal": 8
+    },
+    "custom/exit": {
+        "format": "❌  ",
+  	"on-click": "${HOME}/.config/sway/bin/exitmenu"
+    }
+}
+

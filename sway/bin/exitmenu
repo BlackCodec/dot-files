@@ -1,0 +1,83 @@
+#!/bin/bash
+
+action="${@}"
+
+### Themes ###
+# Icons
+shutdown_i='⚡'
+reboot_i='🌀'
+lock_i='🔑'
+logout_i='⛔'
+reload_i='♻'
+yes_i='✔'
+no_i='✘'
+
+# Text
+shutdown_t='Spengi'
+reboot_t='Riavvia'
+lock_t='Blocca lo schermo'
+logout_t='Disconnetti'
+reload_t='Ricarica'
+yes_t='Si'
+no_t='No'
+
+# Actions
+shutdown_c='poweroff'
+reboot_c='reboot'
+lock_c='lock'
+logout_c='logout'
+reload_c='reload'
+
+### Build command variables ###
+function getOption() {
+  eval "echo \${${1}_i} \${${1}_t} \(\${${1}_c}\)"
+}
+
+function getButton() {
+  eval "echo \${${1}_i} \${${1}_t}"
+}
+
+
+function printOptions() {
+  getOption "reload"
+  getOption "lock"  
+  getOption "logout"
+  getOption "reboot"
+  getOption "shutdown"
+}
+
+function executeCommand() {
+  cact="${@}"
+  cmatch=$(echo "${cact}" | awk -F "(" '{print $2}' | sed "s|)||g")
+  if [[ -z "${cmatch}" ]]; then 
+    cmatch="${1}"
+  fi
+  case "${cmatch}" in
+    $shutdown_c ) comando="poweroff";;
+    $reboot_c   ) comando="reboot";;
+    $reload_c   ) swaymsg reload; exit 0;;
+    $logout_c   ) comando="swaymsg exit";;
+    $lock_c     ) swaylock -i ${HOME}/.config/sway/wallpapers/lock -t -e & exit 0;;
+    *           ) swaynag -m "Comando sconosciuto ${cact}: ${cmatch}" >/dev/null; exit 0;;
+  esac
+  yes=$(getButton "yes")
+  no=$(getButton "no")
+  yesno=$(echo -e "${yes}\n${no}" | fuzzel --dmenu --prompt="${cact}" || echo "NULL")
+  if [[ "${yesno}" == "${yes}" ]]; then
+    ${comando}
+  fi
+  exit 1
+  #swaynag -t warning -m "${cact}? " -Z "${yes}" "${comando}" -s "${no}" > /dev/null
+}
+
+if [[ -z "${action}" ]]; then
+  choosen=$(printOptions | fuzzel --dmenu --prompt='Termina sessione: ' || echo "NULL")
+  if [[ "${choosen}" == "NULL" ]]; then
+    exit 1
+  else
+    executeCommand "${choosen}"
+  fi
+else
+  executeCommand ${action}
+fi
+exit 0

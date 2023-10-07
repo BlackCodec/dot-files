@@ -1,0 +1,1 @@
+lock "swaylock -i ${HOME}/.config/sway/wallpapers/lock -t -e"

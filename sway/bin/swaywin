@@ -1,0 +1,47 @@
+#!/bin/bash
+
+window_id=${@}
+
+function getWindowList() {
+  lista=$(swaymsg -t get_tree | jq -r \
+     '.. | (.nodes? // empty)[] | select(.pid) | 
+     {id} + {name} + {app_id} + .window_properties | {id} + {class} + {app_id} + {name} |
+     [.id, .class, .app_id, .name ] | @tsv')
+  while IFS= read -r line; do
+    appid=$(echo "${line}" | awk -F "\t" '{print $1}')
+    appname=$(echo "${line}" | awk -F "\t" '{print $2}')
+    if [[ -z "${appname}" ]] || [[ "${appname}" == "null" ]]; then
+      appname=$(echo "${line}" | awk -F "\t" '{print $3}')
+    fi
+    winname=$(echo "${line}" | awk -F "\t" '{print $4}')
+    appico=$(getAppIcon ${appname})
+    echo "${appid} ${appico} ${winname} (${appname})"
+  done <<< "${lista}"
+}
+
+function getAppIcon() {
+  searchapp=$(echo "'${1}'")
+  foundLine=$(grep "${searchapp}" ${HOME}/.config/sworkstyle/config.toml)
+  if [[ -z "${foundLine}" ]]; then
+    foundLine=$(grep "fallback" ${HOME}/.config/sworkstyle/config.toml)
+  fi
+  echo $foundLine | awk -F "=" '{print $2}' | sed "s|'||g"
+}
+
+function selectWindow() {
+  winid=$(echo "${1}" | awk -F " " '{print $1}')
+  swaymsg "[con_id=${winid}]" focus > /dev/null
+}
+
+if [[ -z "${window_id}" ]]; then
+  wlist=$(getWindowList)
+  selected=$(echo "${wlist}" | fuzzel --dmenu --prompt=Finestre: || "NULL")
+  if [[ "${selected}" == "NULL" ]]; then
+    exit 1
+  else
+    selectWindow "${selected}"
+  fi
+else
+  selectWindow "${window_id}"
+fi
+exit 0
