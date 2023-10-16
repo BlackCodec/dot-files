@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<JWM>
+    <!-- Visual Styles -->
+    <WindowStyle decorations="flat">
+        <Font>Sans-10</Font>
+        <Width>2</Width>
+        <Height>26</Height>
+        <Corner>6</Corner>
+        <Foreground>#6b6a6a</Foreground>
+        <Background>#d4d4d4</Background>
+        <Outline>#444444</Outline>
+        <Opacity>1.0</Opacity>
+        <Active>
+            <Foreground>#444444</Foreground>
+            <Background>#d4d4d4</Background>
+            <Opacity>1.0</Opacity>
+            <Outline>#3d3d3d</Outline>
+        </Active>
+    </WindowStyle>
+    
+    
+    <TrayStyle decorations="flat" group="false" list="all">
+        <Font>Sans-12</Font>
+        <Background>#444444</Background>
+        <Foreground>#ffffff</Foreground>
+        <Opacity>1.0</Opacity>
+    </TrayStyle>
+    
+    <TaskListStyle list="all" group="false" decoration="motif">
+      <Font>Sans-10</Font>
+      <Active>
+        <Foreground>#fffff</Foreground>
+        <Background>#6699CC</Background>
+      </Active>
+      <Foreground>#f7f7f7</Foreground>
+      <Background>#444444</Background>
+    </TaskListStyle>
+    
+    <MenuStyle>
+        <Font>Sans-12</Font>
+        <Foreground>#2c2c2c</Foreground>
+        <Background>#d4d4d4</Background>
+        <Active>
+          <Foreground>#ffffff</Foreground>
+          <Background>#6699CC</Background>
+        </Active>
+        <Opacity>1.0</Opacity>
+    </MenuStyle>
+    
+    <TrayButtonStyle>
+      <Font>Sans-10</Font>
+      <Active>
+        <Foreground>#ffffff</Foreground>
+        <Background>#6699CC</Background>
+      </Active>
+      <Foreground>#f7f7f7</Foreground>
+      <Background>#444444</Background>
+    </TrayButtonStyle>
+    
+    <PopupStyle>
+        <Font>Sans-12</Font>
+        <Foreground>#f7f7f7</Foreground>
+        <Background>#444444</Background>
+    </PopupStyle>
+    
+    <PagerStyle>
+        <!-- finestra inattiva -->
+        <Foreground>#444444</Foreground>
+        <!-- screen inattivo -->
+        <Background>#2c2c2c</Background>
+        <!-- bordo finestra -->
+        <Outline>#d4d4d4</Outline>
+        <Text>#FFFFFF</Text>
+        <Active>
+            <!-- finestra attiva -->
+            <Foreground>#4a90d9</Foreground>
+            <!-- virtual screen selezionato -->
+            <Background>#6699CC</Background>
+        </Active>
+    </PagerStyle>
+    
+    <!-- Tema -->
+    <ButtonClose>/usr/share/themes/Trisquel/jwm/close.svg</ButtonClose>
+    <ButtonMax>/usr/share/themes/Trisquel/jwm/max.svg</ButtonMax>
+    <ButtonMaxActive>/usr/share/themes/Trisquel/jwm/max.svg</ButtonMaxActive>
+    <ButtonMin>/usr/share/themes/Trisquel/jwm/min.svg</ButtonMin>
+
+    <ButtonMenu>/usr/share/themes/Trisquel/jwm/app.xpm</ButtonMenu>
+    <DefaultIcon>/usr/share/themes/Trisquel/jwm/app.xpm</DefaultIcon>
+</JWM>

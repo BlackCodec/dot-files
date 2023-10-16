@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<JWM>
+    <!-- Visual Styles -->
+    <WindowStyle decorations="flat">
+        <Font>Sans-10</Font>
+        <Width>2</Width>
+        <Height>24</Height>
+        <Corner>1</Corner>
+        <Foreground>#6E6E6E</Foreground>
+        <Background>#FFFFFF</Background>
+        <Opacity>1.0</Opacity>
+        <Active>
+            <Foreground>#373737</Foreground>
+            <Background>#FFFFFF</Background>
+            <Opacity>1.0</Opacity>
+        </Active>
+    </WindowStyle>
+    <TrayStyle decorations="flat" group="true" list="all">
+        <Font>Sans-12</Font>
+        <Background>#373737</Background>
+        <Foreground>#E3E3E3</Foreground>
+        <Opacity>0.9</Opacity>
+    </TrayStyle>
+    <TaskListStyle list="all" group="false" decoration="flat">
+      <Font>Sans-10</Font>
+      <Active>
+        <Foreground>#E3E3E3</Foreground>
+        <Background>#7A7A7A</Background>
+      </Active>
+      <Foreground>#E3E3E3</Foreground>
+      <Background>#373737</Background>
+    </TaskListStyle>
+    <PagerStyle>
+        <Foreground>#7A7A7A</Foreground>
+        <Background>#6E6E6E</Background>
+        <Outline>#373737</Outline>
+        <Text>#FF0000</Text>
+        <Active>
+            <Foreground>#E3E3E3</Foreground>
+            <Background>#7A7A7A</Background>
+        </Active>
+    </PagerStyle>
+    <MenuStyle decorations="flat">
+        <Font>Sans-12</Font>
+        <Foreground>#373737</Foreground>
+        <Background>#E3E3E3</Background>
+        <Active>
+            <Foreground>#E3E3E3</Foreground>
+            <Background>#373737</Background>
+        </Active>
+        <Opacity>0.9</Opacity>
+    </MenuStyle>
+    <PopupStyle>
+        <Font>Sans-12</Font>
+        <Foreground>#000000</Foreground>
+        <Background>#999999</Background>
+    </PopupStyle>
+    <!-- Tema -->
+    <ButtonClose>/usr/share/themes/win11/jwm/close.xpm</ButtonClose>
+    <ButtonMax>/usr/share/themes/win11/jwm/maximize.xpm</ButtonMax>
+    <ButtonMaxActive>/usr/share/themes/win11/jwm/restore.xpm</ButtonMaxActive>
+    <ButtonMin>/usr/share/themes/win11/jwm/minimize.xpm</ButtonMin>
+</JWM>

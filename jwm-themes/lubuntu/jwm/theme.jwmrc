@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<JWM>
+    <!-- Visual Styles -->
+    <WindowStyle decorations="flat">
+        <Font>Sans-10</Font>
+        <Width>2</Width>
+        <Height>26</Height>
+        <Corner>6</Corner>
+        <Foreground>#b6b6b6</Foreground>
+        <Background>#e0e0e0</Background>
+        <Outline>#808080</Outline>
+        <Opacity>1.0</Opacity>
+        <Active>
+            <Foreground>#737373</Foreground>
+            <Background>#f9f9f9:#e0e0e0</Background>
+            <Opacity>1.0</Opacity>
+            <Outline>#606060</Outline>
+        </Active>
+    </WindowStyle>
+    
+    
+    <TrayStyle decorations="flat" group="false" list="all">
+        <Font>Sans-12</Font>
+        <Background>#e0e0e0</Background>
+        <Foreground>#000</Foreground>
+        <Opacity>1.0</Opacity>
+    </TrayStyle>
+    
+    <TaskListStyle list="all" group="false" decoration="motif">
+      <Font>Sans-10</Font>
+      <Active>
+        <Foreground>#ffffff</Foreground>
+        <Background>#c0c0c0:#9e9e9e</Background>
+      </Active>
+      <Foreground>#000000</Foreground>
+      <Background>#e0e0e0</Background>
+    </TaskListStyle>
+    
+    <PagerStyle>
+        <!-- finestra inattiva -->
+        <Foreground>#e0e0e0</Foreground>
+        <!-- screen inattivo -->
+        <Background>#9d9d9d</Background>
+        <!-- bordo finestra -->
+        <Outline>#FFFFFF</Outline>
+        <Text>#FFFFFF</Text>
+        <Active>
+            <!-- finestra attiva -->
+            <Foreground>#8fb2cf</Foreground>
+            <!-- virtual screen selezionato -->
+            <Background>#587e9d</Background>
+        </Active>
+    </PagerStyle>
+    
+    <MenuStyle>
+        <Font>Sans-12</Font>
+        <Foreground>#000000</Foreground>
+        <Background>#e0e0e0</Background>
+        <Active>
+          <Foreground>#ffffff</Foreground>
+          <Background>#8fb2cf</Background>
+        </Active>
+        <Opacity>1.0</Opacity>
+    </MenuStyle>
+    
+    <TrayButtonStyle>
+      <Font>Sans-10</Font>
+      <Active>
+        <Foreground>#ffffff</Foreground>
+        <Background>#8fb2cf</Background>
+      </Active>
+      <Foreground>#000000</Foreground>
+      <Background>#e0e0e0</Background>
+    </TrayButtonStyle>
+    
+    <PopupStyle>
+        <Font>Sans-12</Font>
+        <Foreground>#3c3c3c</Foreground>
+        <Background>#ededed</Background>
+    </PopupStyle>
+    
+    <!-- Tema -->
+<!--
+    <ButtonClose>/usr/share/themes/lubuntu/jwm/close.png</ButtonClose>
+    <ButtonMax>/usr/share/themes/lubuntu/jwm/max.png</ButtonMax>
+    <ButtonMaxActive>/usr/share/themes/lubuntu/jwm/max.png</ButtonMaxActive>
+    <ButtonMin>/usr/share/themes/lubuntu/jwm/min.png</ButtonMin>
+-->
+    <ButtonClose>/usr/share/themes/lubuntu/jwm/close.svg</ButtonClose>
+    <ButtonMax>/usr/share/themes/lubuntu/jwm/wmax.png</ButtonMax>
+    <ButtonMaxActive>/usr/share/themes/lubuntu/jwm/wrestore.png</ButtonMaxActive>
+    <ButtonMin>/usr/share/themes/lubuntu/jwm/wmin.png</ButtonMin>
+
+    <ButtonMenu>/usr/share/themes/lubuntu/jwm/app.xpm</ButtonMenu>
+    <DefaultIcon>/usr/share/themes/lubuntu/jwm/app.xpm</DefaultIcon>
+</JWM>

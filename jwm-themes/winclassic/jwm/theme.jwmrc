@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<JWM>
+    <!-- Visual Styles -->
+    <WindowStyle decorations="flat">
+        <Font>Sans-10</Font>
+        <Width>2</Width>
+        <Height>26</Height>
+        <Corner>2</Corner>
+        <Foreground>#D4D0C8</Foreground>
+        <Background>#404040;#808080</Background>
+        <Outline>#404040</Outline>
+        <Opacity>1.0</Opacity>
+        <Active>
+            <Foreground>#FFFFFF</Foreground>
+            <Background>#0a2368;#7d9ec0</Background>
+            <Opacity>1.0</Opacity>
+            <Outline>#404040</Outline>
+        </Active>
+    </WindowStyle>
+    <TrayStyle decorations="flat" group="false" list="all">
+        <Font>Sans-12</Font>
+        <Background>#d4cfc7</Background>
+        <Foreground>#000000</Foreground>
+        <Opacity>1.0</Opacity>
+    </TrayStyle>
+    <TaskListStyle list="all" group="false" decoration="motif">
+      <Font>Sans-10</Font>
+      <Active>
+        <Foreground>#FFFFFF</Foreground>
+        <Background>#0a2368</Background>
+      </Active>
+      <Foreground>#000000</Foreground>
+      <Background>#d4cfc7</Background>
+    </TaskListStyle>
+    <PagerStyle>
+        <Foreground>#808080</Foreground>
+        <Background>#404040</Background>
+        <Outline>#000000</Outline>
+        <Text>#FFFFFF</Text>
+        <Active>
+            <Foreground>#7d9ec0</Foreground>
+            <Background>#0a2368</Background>
+        </Active>
+    </PagerStyle>
+    <MenuStyle>
+        <Font>Sans-12</Font>
+        <Foreground>#000000</Foreground>
+        <Background>#d4cfc7</Background>
+        <Active>
+            <Foreground>#FFFFFF</Foreground>
+            <Background>#0a2368</Background>
+        </Active>
+        <Opacity>1.0</Opacity>
+    </MenuStyle>
+    <TrayButtonStyle>
+      <Font>Sans-10</Font>
+      <Active>
+        <Foreground>#FFFFFF</Foreground>
+        <Background>#0a2368</Background>
+      </Active>
+      <Foreground>#000000</Foreground>
+      <Background>#d4cfc7</Background>
+
+    </TrayButtonStyle>
+    <PopupStyle>
+        <Font>Sans-12</Font>
+        <Foreground>#000000</Foreground>
+        <Background>#d4cfc7</Background>
+    </PopupStyle>
+    <!-- Tema -->
+    <ButtonClose>/usr/share/themes/winclassic/jwm/close.png</ButtonClose>
+    <ButtonMax>/usr/share/themes/winclassic/jwm/max.png</ButtonMax>
+    <ButtonMaxActive>/usr/share/themes/winclassic/jwm/restore.png</ButtonMaxActive>
+    <ButtonMin>/usr/share/themes/winclassic/jwm/min.png</ButtonMin>
+    <ButtonMenu>/usr/share/themes/winclassic/jwm/app.xpm</ButtonMenu>
+    <DefaultIcon>/usr/share/themes/winclassic/jwm/app.xpm</DefaultIcon>
+</JWM>

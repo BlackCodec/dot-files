@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<JWM>
+    <!-- Visual Styles -->
+    <WindowStyle decorations="flat">
+        <Font>Sans-10</Font>
+        <Width>2</Width>
+        <Height>26</Height>
+        <Corner>2</Corner>
+        <Foreground>#626262</Foreground>
+        <Background>#ededed</Background>
+        <Outline>#404040</Outline>
+        <Opacity>1.0</Opacity>
+        <Active>
+            <Foreground>#212121</Foreground>
+            <Background>#ededed</Background>
+            <Opacity>1.0</Opacity>
+            <Outline>#404040</Outline>
+        </Active>
+    </WindowStyle>
+    
+    
+    <TrayStyle decorations="flat" group="false" list="all">
+        <Font>Sans-12</Font>
+        <Background>#ededed</Background>
+        <Foreground>#3c3c3c</Foreground>
+        <Opacity>1.0</Opacity>
+    </TrayStyle>
+    
+    <TaskListStyle list="all" group="false" decoration="motif">
+      <Font>Sans-10</Font>
+      <Active>
+        <Foreground>#3c3c3c</Foreground>
+        <Background>#a9b7c4</Background>
+      </Active>
+      <Foreground>#3c3c3c</Foreground>
+      <Background>#ededed</Background>
+    </TaskListStyle>
+    
+    <PagerStyle>
+        <!-- finestra inattiva -->
+        <Foreground>#b5b5b5</Foreground>
+        <!-- screen inattivo -->
+        <Background>#b5b5b5</Background>
+        <!-- bordo finestra -->
+        <Outline>#000000</Outline>
+        <Text>#FFFFFF</Text>
+        <Active>
+            <!-- finestra attiva -->
+            <Foreground>#e0e0e0</Foreground>
+            <!-- virtual screen selezionato -->
+            <Background>#a9b7c4</Background>
+        </Active>
+    </PagerStyle>
+    
+    <MenuStyle>
+        <Font>Sans-12</Font>
+        <Foreground>#3c3c3c</Foreground>
+        <Background>#ededed</Background>
+        <Active>
+            <Foreground>#333333</Foreground>
+            <Background>#a9b7c4</Background> 
+        </Active>
+        <Opacity>1.0</Opacity>
+    </MenuStyle>
+    
+    <TrayButtonStyle>
+      <Font>Sans-10</Font>
+      <Active>
+        <Foreground>#333333</Foreground>
+        <Background>#a9b7c4</Background>
+      </Active>
+      <Foreground>#3c3c3c</Foreground>
+      <Background>#ededed</Background>
+    </TrayButtonStyle>
+    
+    <PopupStyle>
+        <Font>Sans-12</Font>
+        <Foreground>#3c3c3c</Foreground>
+        <Background>#ededed</Background>
+    </PopupStyle>
+    
+    <!-- Tema -->
+    <ButtonClose>/usr/share/themes/Albatross/jwm/close.png</ButtonClose>
+    <ButtonMax>/usr/share/themes/Albatross/jwm/max.png</ButtonMax>
+    <ButtonMaxActive>/usr/share/themes/Albatross/jwm/restore.png</ButtonMaxActive>
+    <ButtonMin>/usr/share/themes/Albatross/jwm/min.png</ButtonMin>
+    <ButtonMenu>/usr/share/themes/Albatross/jwm/app.xpm</ButtonMenu>
+    <DefaultIcon>/usr/share/themes/Albatross/jwm/app.xpm</DefaultIcon>
+</JWM>

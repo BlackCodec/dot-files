@@ -1,0 +1,69 @@
+<JWM>
+    <!-- Visual Styles -->
+    <WindowStyle decorations="flat">
+        <Font>Sans-10</Font>
+        <Width>2</Width>
+        <Height>24</Height>
+        <Corner>1</Corner>
+        <Foreground>#888888</Foreground>
+        <Background>#2d2d2d</Background>
+        <Outline>#393939</Outline>
+        <Opacity>1.0</Opacity>
+        <Active>
+            <Foreground>#dcdcdc</Foreground>
+            <Background>#2d2d2d</Background>
+            <Outline>#484848</Outline>
+            <Opacity>1.0</Opacity>
+        </Active>
+    </WindowStyle>
+    <TrayStyle decorations="flat" group="false" list="all">
+        <Font>Sans-12</Font>
+        <Background>#525252</Background>
+        <Foreground>#e0e0e0</Foreground>
+        <Opacity>1.0</Opacity>
+    </TrayStyle>
+    <TaskListStyle list="all" group="false" decoration="flat">
+      <Font>Sans-10</Font>
+      <Active>
+        <Foreground>#fcfcfc</Foreground>
+        <Background>#5294e2</Background>
+      </Active>
+      <Foreground>#e0e0e0</Foreground>
+      <Background>#525252</Background>
+    </TaskListStyle>
+    <PagerStyle>
+    	<!-- background finestre inattive -->
+        <Foreground>#888888</Foreground>
+        <!-- background pager inattivo -->
+        <Background>#525252</Background>
+	<!-- contorni finestre -->
+        <Outline>#393939</Outline>
+        <Text>#FF0000</Text>
+        <Active>
+            <!-- background finestra attiva -->
+            <Foreground>#5294e2</Foreground>
+            <!-- background pager attivo -->
+            <Background>#2d2d2d</Background>
+        </Active>
+    </PagerStyle>
+    <MenuStyle decorations="flat">
+        <Font>Sans-12</Font>
+        <Foreground>#fafafa</Foreground>
+        <Background>#2d2d2d</Background>
+        <Active>
+            <Foreground>#fcfcfc</Foreground>
+            <Background>#5294e2</Background>
+        </Active>
+        <Opacity>1.0</Opacity>
+    </MenuStyle>
+    <PopupStyle>
+        <Font>Sans-12</Font>
+        <Foreground>#e0e0e0</Foreground>
+        <Background>#525252</Background>
+    </PopupStyle>
+    <!-- Tema -->
+    <ButtonClose>/usr/share/themes/arcmix/jwm/close.xpm</ButtonClose>
+    <ButtonMax>/usr/share/themes/arcmix/jwm/maximize.xpm</ButtonMax>
+    <ButtonMaxActive>/usr/share/themes/arcmix/jwm/restore.xpm</ButtonMaxActive>
+    <ButtonMin>/usr/share/themes/arcmix/jwm/minimize.xpm</ButtonMin>
+</JWM>

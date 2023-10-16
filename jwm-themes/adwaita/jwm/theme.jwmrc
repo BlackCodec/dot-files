@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<JWM>
+    <!-- Visual Styles -->
+    <WindowStyle decorations="flat">
+        <Font>Sans-10</Font>
+        <Width>2</Width>
+        <Height>26</Height>
+        <Corner>6</Corner>
+        <Foreground>#2e3436</Foreground>
+        <Background>#e8e8e7</Background>
+        <Outline>#f4f4f4</Outline>
+        <Opacity>1.0</Opacity>
+        <Active>
+            <Foreground>#2e3436</Foreground>
+            <Background>#e8e8e7</Background>
+            <Opacity>1.0</Opacity>
+            <Outline>#606060</Outline>
+        </Active>
+    </WindowStyle>
+    
+    
+    <TrayStyle decorations="flat" group="false" list="all">
+        <Font>Sans-12</Font>
+        <Background>#e8e8e7</Background>
+        <Foreground>#2e3436</Foreground>
+        <Opacity>1.0</Opacity>
+    </TrayStyle>
+    
+    <TaskListStyle list="all" group="false" decoration="motif">
+      <Font>Sans-10</Font>
+      <Active>
+        <Foreground>#ffffff</Foreground>
+        <Background>#4a90d9</Background>
+      </Active>
+      <Foreground>#2e3436</Foreground>
+      <Background>#e8e8e7</Background>
+    </TaskListStyle>
+    
+    <PagerStyle>
+        <!-- finestra inattiva -->
+        <Foreground>#e8e8e7</Foreground>
+        <!-- screen inattivo -->
+        <Background>#9d9d9d</Background>
+        <!-- bordo finestra -->
+        <Outline>#000000</Outline>
+        <Text>#FFFFFF</Text>
+        <Active>
+            <!-- finestra attiva -->
+            <Foreground>#4a90d9</Foreground>
+            <!-- virtual screen selezionato -->
+            <Background>#4a90d9</Background>
+        </Active>
+    </PagerStyle>
+    
+    <MenuStyle>
+        <Font>Sans-12</Font>
+        <Foreground>#2e3436</Foreground>
+        <Background>#e8e8e7</Background>
+        <Active>
+          <Foreground>#ffffff</Foreground>
+          <Background>#4a90d9</Background>
+        </Active>
+        <Opacity>1.0</Opacity>
+    </MenuStyle>
+    
+    <TrayButtonStyle>
+      <Font>Sans-10</Font>
+      <Active>
+        <Foreground>#ffffff</Foreground>
+        <Background>#4a90d9</Background>
+      </Active>
+      <Foreground>#2e3436</Foreground>
+      <Background>#e8e8e7</Background>
+    </TrayButtonStyle>
+    
+    <PopupStyle>
+        <Font>Sans-12</Font>
+        <Foreground>#ffffff</Foreground>
+        <Background>#343434</Background>
+    </PopupStyle>
+    
+    <!-- Tema -->
+    <ButtonClose>/usr/share/themes/adwaita/jwm/close.svg</ButtonClose>
+    <ButtonMax>/usr/share/themes/adwaita/jwm/wmax.png</ButtonMax>
+    <ButtonMaxActive>/usr/share/themes/adwaita/jwm/wrestore.png</ButtonMaxActive>
+    <ButtonMin>/usr/share/themes/adwaita/jwm/wmin.png</ButtonMin>
+
+    <ButtonMenu>/usr/share/themes/adwaita/jwm/app.xpm</ButtonMenu>
+    <DefaultIcon>/usr/share/themes/adwaita/jwm/app.xpm</DefaultIcon>
+</JWM>

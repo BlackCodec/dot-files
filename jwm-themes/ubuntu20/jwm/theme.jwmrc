@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<JWM>
+    <!-- Visual Styles -->
+    <WindowStyle decorations="flat">
+        <Font>Sans-10</Font>
+        <Width>2</Width>
+        <Height>24</Height>
+        <Corner>1</Corner>
+        <Foreground>#807d78</Foreground>
+        <Background>#424242</Background> 
+        <Opacity>1.0</Opacity>
+        <Active>
+            <!-- Foreground = testo -->
+            <Foreground>#dfdbd2</Foreground>
+            <Background>#424242</Background>
+            <!-- eff0f2 -->
+            <Opacity>1.0</Opacity>
+        </Active>
+    </WindowStyle>
+    <TrayStyle decorations="flat" group="true" list="all">
+        <Font>Sans-12</Font>
+        <Background>#424242</Background> <!-- 5e5e5e/FFFFFF -->
+        <Foreground>#dfdbd2</Foreground>
+        <Opacity>0.8</Opacity>
+    </TrayStyle>
+    <TaskListStyle list="all" group="false" decoration="flat">
+      <Font>Sans-10</Font>
+      <Active>
+        <Foreground>#FFFFFF</Foreground>
+        <Background>#000000</Background>
+      </Active>
+      <Foreground>#dfdbd2</Foreground>
+      <Background>#424242</Background>
+    </TaskListStyle>
+    <PagerStyle>
+        <Foreground>#3d3d3d</Foreground>
+        <Background>#424242</Background>
+        <Outline>#3d3d3d</Outline>
+        <Text>#FFFFFF</Text>
+        <Active>
+            <Foreground>#e55730</Foreground>
+            <Background>#dfdbd2</Background>
+        </Active>
+    </PagerStyle>
+    <MenuStyle decorations="flat">
+        <Font>Sans-12</Font>
+        <Foreground>#dfdbd2</Foreground>
+        <Background>#424242</Background>
+        <Active>
+            <Foreground>#ffffff</Foreground>
+            <Background>#000000</Background>
+        </Active>
+        <Opacity>0.9</Opacity>
+    </MenuStyle>
+    <PopupStyle>
+        <Font>Sans-12</Font>
+        <Foreground>#ffffff</Foreground>
+        <Background>#5e5e5e</Background>
+    </PopupStyle>
+    <!-- Tema -->
+    <ButtonClose>/usr/share/themes/ubuntu20/jwm/close.xpm</ButtonClose>
+    <ButtonMax>/usr/share/themes/ubuntu20/jwm/maximize.xpm</ButtonMax>
+    <ButtonMaxActive>/usr/share/themes/ubuntu20/jwm/restore.xpm</ButtonMaxActive>
+    <ButtonMin>/usr/share/themes/ubuntu20/jwm/minimize.xpm</ButtonMin>
+</JWM>

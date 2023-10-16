@@ -1,0 +1,62 @@
+<JWM>
+    <!-- Visual Styles -->
+    <WindowStyle decorations="flat">
+        <Font>Sans-10</Font>
+        <Width>2</Width>
+        <Height>24</Height>
+        <Corner>1</Corner>
+        <Foreground>#6E6E6E</Foreground>
+        <Background>#e7e8eb</Background>
+        <Opacity>1.0</Opacity>
+        <Active>
+            <Foreground>#2b2f3a</Foreground>
+            <Background>#e7e8eb</Background>
+            <Opacity>1.0</Opacity>
+        </Active>
+    </WindowStyle>
+    <TrayStyle decorations="flat" group="false" list="all">
+        <Font>Sans-12</Font>
+        <Background>#2b2f3a</Background>
+        <Foreground>#e7e8eb</Foreground>
+        <Opacity>1.0</Opacity>
+    </TrayStyle>
+    <TaskListStyle list="all" group="false" decoration="flat">
+      <Font>Sans-10</Font>
+      <Active>
+        <Foreground>#2b2f3a</Foreground>
+        <Background>#7A7A7A</Background>
+      </Active>
+      <Foreground>#7A7A7A</Foreground>
+      <Background>#2b2f3a</Background>
+    </TaskListStyle>
+    <PagerStyle>
+        <Foreground>#7A7A7A</Foreground>
+        <Background>#6E6E6E</Background>
+        <Outline>#2b2f3a</Outline>
+        <Text>#FF0000</Text>
+        <Active>
+            <Foreground>#e7e8eb</Foreground>
+            <Background>#7A7A7A</Background>
+        </Active>
+    </PagerStyle>
+    <MenuStyle decorations="flat">
+        <Font>Sans-12</Font>
+        <Foreground>#2b2f3a</Foreground>
+        <Background>#e7e8eb</Background>
+        <Active>
+            <Foreground>#e7e8eb</Foreground>
+            <Background>#2b2f3a</Background>
+        </Active>
+        <Opacity>1.0</Opacity>
+    </MenuStyle>
+    <PopupStyle>
+        <Font>Sans-12</Font>
+        <Foreground>#000000</Foreground>
+        <Background>#999999</Background>
+    </PopupStyle>
+    <!-- Tema -->
+    <ButtonClose>/usr/share/themes/Arc-EvoPro3/jwm/close-active.png</ButtonClose>
+    <ButtonMax>/usr/share/themes/Arc-EvoPro3/jwm/maximize-active.png</ButtonMax>
+    <ButtonMaxActive>/usr/share/themes/Arc-EvoPro3/jwm/maximize-active.png</ButtonMaxActive>
+    <ButtonMin>/usr/share/themes/Arc-EvoPro3/jwm/hide-active.png</ButtonMin>
+</JWM>
